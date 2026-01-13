@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding:0;
+}
+img{
+    width:200px;
+    height: auto;
+    border-radius: 20%;
+    transition: transform 0.5s ease, border 0.5s ease;
+}
+
+body{
+    text-align: center;
+}
+
+h1{
+    font-size:55px;
+    color: white;
+    text-shadow: 1px 2px 7px white;
+    padding-bottom: 5%;
+}
+
+p{
+    color: white;
+    font-size: 16px;
+}
+
+.bobaLogo{
+    padding: 2% 1%;
+    display:flex;
+    justify-content: start;
+}
+
+.title{
+    animation: float 5s ease-in-out infinite;
+}
+
+.letterContain{
+    width:100%;
+    display: grid;
+    justify-content: center;
+}
+
+.imageHolder{
+    padding-top: 8%;
+    display:flex;
+    gap: 3%;
+    align-items: center;
+    justify-content: center;
+}
+
+.letterText{
+    padding: 3% 3%;
+    border-radius:35px;
+    background-color: #A77743;
+    border: 5px solid rgb(106, 78, 25);
+    height: fit-content;
+    width: fit-content;
+    justify-content: center;
+    text-align: left;
+    text-shadow: 1px 2px 5px black;
+    box-shadow: 1px 2px 15px white;
+}
+@keyframes float {
+    0%{
+        transform: translateY(0%);
+    }50%{
+        transform:translateY(-7%)
+    }100%{
+        transform: translateY(0%);
+    }
+}
+
+.background{
+    height: 100vh;
+    width:100vw;
+    background: linear-gradient(180deg,#784917,#976E43,#784917);
+    background-size: 400% 400%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position:absolute;
+    z-index: -1;
+    animation: gradient 10s ease-in-out infinite ;
+}
+
+@keyframes gradient {
+    0%{
+        background-position: 100% 0%;
+    }50%{
+        background-position:100% 100% ;
+    } 100%{
+        background-position: 100% 0%;
+    }
+}
+
+.hoverImg:hover{
+    transform: scale(1.1);
+    border: 3px solid rgb(106, 78, 25); 
+    box-shadow: 1px 2px 15px white;
+}
+
+.hover:not(:hover){
+    transition-delay: 3s;
+}
+
+.arrow{
+    width: 80px;
+    height: auto;
+    animation: arrowMoving 3s ease infinite;
+}
+
+@keyframes arrowMoving {
+    0%{
+        transform:translateX(0%);
+    }50%{
+        transform:translateX(10%);
+    }100%{
+        transform:translateX(0%);
+    }
+}
